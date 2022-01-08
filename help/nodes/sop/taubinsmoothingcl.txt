@@ -1,0 +1,50 @@
+#type: node
+#context: sop
+#internal: taubinsmoothingcl
+#icon: /nodes/sop/SOP_TaubinSmoothingCl
+#version: 1.0
+#tags: smooth
+#since: 18.5
+
+= Taubin Smoothing CL =
+
+""" Do neighbours lookup and smooths out polygons while preserving the main details. """
+
+This node rearranges the existing points in the (polygonal) geometry to reduce roughness while preserving the main details.
+
+TIP:
+    Operator performs a very fast neighbours lookup which it can be exported as an attribute by turning on the "Export" parameter. Also the smoothing operation can be disabled by setting "Blur Iteration" parameter to 0.
+
+== Using Taubin Smoothing CL ==
+
+# Select the polygon you want to smooth.
+
+# Put down an Taubin Smoothing CL node.
+
+You can change the smoothing specifications in the parameter editor.
+
+@parameters
+
+Neighbours Name:
+    #channels: /neighboursname
+    An Attribute name for neighbours lookup
+
+Export:
+    #channels: /export
+    Optional parameter for exporting neighbours lookup as an attribute
+
+Blur Iteration:
+    #channels: /bluriteration
+    Number of successive smoothing operation
+
+First Phase Step:
+    #channels: /firstphasestep
+    Amounts of averaging in the first step of iteration
+
+Second Phase Step:
+    #channels: /secondphasestep
+    Amounts of de-averaging in the second step of iteration
+
+@related
+- [Node:sop/smooth]
+- [Node:sop/attribblur]
