@@ -26,9 +26,9 @@ You can download source code archives from [GitHub](https://www.github.com/Amir-
 
 [Getting Started with the HDK](https://www.sidefx.com/tutorials/quick-tip-getting-started-with-the-hdk/)
 
-#### 4. Icon and helpcard
+#### 4. OpenCL kernel, Icon and helpcard
 
-Copy and paste "config" and "help" folders in the houdini preferences folder.
+Copy and paste "ocl", "config" and "help" folders in the houdini preferences folder.
 
 Default paths of preferences folder:
   * linux: /home/username/houdini*.*
